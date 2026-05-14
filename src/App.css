@@ -218,15 +218,16 @@ h1 {
   position: fixed;
   left: 24px;
   bottom: 24px;
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   background-image: url('/Cat Sprite Sheet.png');
   background-size: 256px 320px;
   background-position: 0 0;
+  background-repeat: no-repeat;
   image-rendering: pixelated;
   pointer-events: none;
   z-index: 10;
-  animation: pixel-cat-walk 0.8s steps(8) infinite;
+  animation: pixel-cat-walk 1.8s steps(8) infinite;
 }
 
 @keyframes pixel-cat-walk {
