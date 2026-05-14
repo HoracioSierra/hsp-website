@@ -140,6 +140,94 @@ h1 {
   background: #0f79b0;
 }
 
+.projects-section {
+  margin-top: 56px;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  letter-spacing: -0.04em;
+}
+
+.section-copy {
+  margin: 0;
+  color: #a1adbe;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.project-island {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 150px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: rgba(10, 14, 18, 0.9);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.project-island:hover {
+  transform: translateY(-2px);
+  border-color: rgba(139, 231, 255, 0.35);
+}
+
+.project-name {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.project-description {
+  margin: 0;
+  color: #bac8d8;
+  line-height: 1.6;
+}
+
+.project-link {
+  margin-top: 18px;
+  color: #8be7ff;
+  font-weight: 600;
+}
+
+.activity-panel {
+  margin-top: 42px;
+  max-width: 700px;
+}
+
+.activity-panel p {
+  margin: 0 0 10px;
+}
+
+.pixel-cat {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  width: 64px;
+  height: 64px;
+  background-image: url('/Cat Sprite Sheet.png');
+  background-size: 512px 640px;
+  background-position: 0 0;
+  image-rendering: pixelated;
+  pointer-events: none;
+  z-index: 10;
+}
+
 .loading-dots {
   display: inline-flex;
   gap: 4px;
@@ -174,7 +262,8 @@ h1 {
 }
 
 @media (max-width: 900px) {
-  .hero-grid {
+  .hero-grid,
+  .projects-grid {
     grid-template-columns: 1fr;
   }
 }

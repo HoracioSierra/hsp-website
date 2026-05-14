@@ -1,4 +1,7 @@
 import React from 'react';
+import ProjectIsland from './components/ProjectIsland';
+import PixelCat from './components/PixelCat';
+import projects from './data/projects';
 
 function App() {
   return (
@@ -60,7 +63,30 @@ function App() {
             </div>
           </div>
         </section>
+
+        <section className="projects-section">
+          <div className="section-header">
+            <p className="label">projects</p>
+            <h2>recent work</h2>
+            <p className="section-copy">
+              Click each card to open the GitHub repository.
+            </p>
+          </div>
+
+          <div className="projects-grid">
+            {projects.map((project) => (
+              <ProjectIsland key={project.name} project={project} />
+            ))}
+          </div>
+        </section>
+
+        <section className="activity-panel panel">
+          <p className="label">github activity</p>
+          <p>Recent project updates appear here. This section is optional-looking for now.</p>
+        </section>
       </main>
+
+      <PixelCat />
     </div>
   );
 }
