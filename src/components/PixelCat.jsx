@@ -1,15 +1,33 @@
-import React from 'react';
+import { useEffect, useState } from "react";
 
 function PixelCat() {
-  // Debug: show one static frame
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    const pauseEvery = 23000;
+    const pauseLength = 3000;
+
+    const interval = setInterval(() => {
+      setPaused(true);
+
+      setTimeout(() => {
+        setPaused(false);
+      }, pauseLength);
+    }, pauseEvery);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="cat-pet">
-       <div className="cat-flip">
-        <div className="cat-scale">
-      <div className="pixel-cat"></div>
+    <div className={paused ? "cat-scene paused" : "cat-scene"}>
+      <div className="cat-pet">
+        <div className="cat-flip">
+          <div className="cat-scale">
+            <div className="pixel-cat"></div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   );
 }
 
