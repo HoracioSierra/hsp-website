@@ -300,6 +300,15 @@ h1 {
     background-position: -256px -128px;
   }
 }
+@keyframes catSitTail {
+  from {
+    background-position: 0px 0px;
+  }
+
+  to {
+    background-position: -128px 0px;
+  }
+}
 .cat-scene.paused .cat-pet,
 .cat-scene.paused .cat-flip,
 .cat-scene.paused .pixel-cat {
@@ -307,8 +316,9 @@ h1 {
 }
 
 .cat-scene.paused .pixel-cat {
-  background-position: 0px -128px;
+  animation: catSitTail 0.8s steps(4) infinite;
 }
+
 
 .loading-dots {
   display: inline-flex;

@@ -3,6 +3,7 @@ import ProjectIsland from './components/ProjectIsland';
 import PixelCat from './components/PixelCat';
 import projects from './data/projects';
 
+
 function App() {
   return (
     <div className="app-shell">
@@ -87,6 +88,7 @@ function App() {
       </main>
 
       <PixelCat />
+      
     </div>
   );
 }
