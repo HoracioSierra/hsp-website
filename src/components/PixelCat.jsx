@@ -4,10 +4,12 @@ function PixelCat() {
   // Debug: show one static frame
   return (
     <div className="cat-pet">
-      <div className="cat-scale">
-        <div className="pixel-cat"></div>
-      </div>
+       <div className="cat-flip">
+        <div className="cat-scale">
+      <div className="pixel-cat"></div>
     </div>
+  </div>
+</div>
   );
 }
 
