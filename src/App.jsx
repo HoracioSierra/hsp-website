@@ -69,7 +69,7 @@ function App() {
         <section className="projects-section">
           <div className="section-header">
             <p className="label">projects</p>
-            <h2>recent work</h2>
+            <h2>Recent Work</h2>
            
           </div>
 

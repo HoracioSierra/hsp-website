@@ -20,6 +20,13 @@ const projects = [
     tech: "React Native · Node.js · PostgreSQL",
     
   },
+  {
+  name: "HSP Website",
+  description:
+    "Personal developer portfolio with project islands, GitHub activity, resume download, and a wandering pixel cat.",
+  tech: "Vite · React · CSS · GitHub API",
+  link: "https://github.com/HoracioSierra/HSP-Website",
+},
   
 ];
 
