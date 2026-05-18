@@ -1,24 +1,26 @@
 const projects = [
   {
     name: 'WatchIt',
-    description: 'A streaming tracker that helps users save and revisit favorite shows.',
-    link: 'https://github.com/HoracioSierra/watchit',
+    description:
+      "Full-stack watchlist app for tracking movies and shows with auth, OMDb search, and user watchlists.",
+    tech: "React · Node.js · Express · MongoDB",
+    link: 'https://github.com/zakariaxk/watchlist-app',
   },
   {
     name: 'ClearView AI',
-    description: 'A computer vision project for clearer image processing workflows.',
-    link: 'https://github.com/HoracioSierra/clearview-ai',
+    description:
+      "AI-powered platform that cleans and analyzes messy software inventory data.",
+    tech: "React · Node.js · Prisma · Gemini API",
+    link: 'https://github.com/ClearView-AI/ClearView-AI',
   },
   {
     name: 'Multi-Mapping GIO',
-    description: 'A mapping tool designed for dynamic geospatial interface overlays.',
-    link: 'https://github.com/HoracioSierra/multi-mapping-gio',
+    description:
+      "Mapping tool designed for dynamic geospatial interfaces, route tracking, and live location overlays.",
+    tech: "React Native · Node.js · PostgreSQL",
+    
   },
-  {
-    name: 'Contactual',
-    description: 'A smart contact manager for faster networking and follow-ups.',
-    link: 'https://github.com/HoracioSierra/contactual',
-  },
+  
 ];
 
 export default projects;

@@ -162,57 +162,150 @@ h1 {
   color: #a1adbe;
 }
 
+.projects-section {
+  margin-top: 56px;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  letter-spacing: -0.04em;
+}
+
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, 260px);
+  gap: 28px;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .project-island {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 150px;
-  padding: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 18px;
-  background: rgba(10, 14, 18, 0.9);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.18s ease, border-color 0.18s ease;
+  width: 260px;
+  height: 320px;
+  perspective: 1000px;
 }
 
-.project-island:hover {
-  transform: translateY(-2px);
-  border-color: rgba(139, 231, 255, 0.35);
+.project-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+}
+
+.project-island:hover .project-card-inner {
+  transform: rotateY(180deg);
+}
+
+.project-card-face {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  padding: 26px 22px;
+  border: 1px solid rgba(139, 231, 255, 0.22);
+  border-radius: 28px;
+
+  background: rgba(10, 14, 18, 0.92);
+  color: inherit;
+  text-align: center;
+
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.project-card-front {
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+.project-card-back {
+  transform: rotateY(180deg);
+  border-color: rgba(139, 231, 255, 0.48);
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(139, 231, 255, 0.16),
+      transparent 58%
+    ),
+    rgba(8, 12, 16, 0.97);
 }
 
 .project-name {
-  margin: 0 0 10px;
-  font-size: 1.05rem;
-  font-weight: 700;
+  margin: 0;
+  font-size: 1.22rem;
+  font-weight: 800;
+  line-height: 1.2;
 }
 
 .project-description {
   margin: 0;
+  max-width: 210px;
   color: #bac8d8;
-  line-height: 1.6;
+  font-size: 0.92rem;
+  line-height: 1.45;
 }
 
-.project-link {
-  margin-top: 18px;
+.project-tech {
+  margin: 0;
+  max-width: 210px;
   color: #8be7ff;
-  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 1.35;
 }
 
-.activity-panel {
-  margin-top: 42px;
-  max-width: 700px;
+.learn-more-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 20px;
+  border: 1px solid rgba(139, 231, 255, 0.45);
+  border-radius: 999px;
+
+  background: rgba(139, 231, 255, 0.1);
+  color: #8be7ff;
+
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.9rem;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.activity-panel p {
-  margin: 0 0 10px;
+.learn-more-button:hover {
+  background: rgba(139, 231, 255, 0.22);
+  color: #ffffff;
+  transform: translateY(-2px);
 }
+
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .project-island {
+    width: min(100%, 300px);
+    height: 320px;
+  }
+}
+
 
 .cat-pet {
   position: fixed;

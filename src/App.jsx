@@ -55,9 +55,9 @@ function App() {
 
             <div className="hero-right">
               <div className="profile-card">
-                <div className="profile-image" />
-                <p className="profile-caption">profile image placeholder</p>
-                <a className="resume-button" href="/Horacio-Sierra-Perez.pdf" target="_blank" rel="noreferrer">
+                <img className="profile-image" src="/profile.jpg" alt="Horacio Sierra Perez" />
+                <p className="profile-caption">Horacio Sierra Perez</p>
+                <a className="resume-button" href="/Horacio-Sierra-Perez.pdf"  target="_blank" rel="noreferrer" download>
                   Download Resume
                 </a>
               </div>
@@ -69,9 +69,7 @@ function App() {
           <div className="section-header">
             <p className="label">projects</p>
             <h2>recent work</h2>
-            <p className="section-copy">
-              Click each card to open the GitHub repository.
-            </p>
+           
           </div>
 
           <div className="projects-grid">

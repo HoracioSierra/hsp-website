@@ -1,14 +1,32 @@
-import React from 'react';
-
 function ProjectIsland({ project }) {
   return (
-    <a className="project-island" href={project.link} target="_blank" rel="noreferrer">
-      <div>
-        <p className="project-name">{project.name}</p>
-        <p className="project-description">{project.description}</p>
+    <article className="project-island">
+      <div className="project-card-inner">
+        <div className="project-card-face project-card-front">
+          <div>
+            <h3 className="project-name">{project.name}</h3>
+            <p className="project-description">{project.description}</p>
+          </div>
+
+          {project.tech && <p className="project-tech">{project.tech}</p>}
+        </div>
+
+        <div className="project-card-face project-card-back">
+          <div>
+            <h3 className="project-name">{project.name}</h3>
+          </div>
+
+          <a
+            className="learn-more-button"
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Learn More →
+          </a>
+        </div>
       </div>
-      <span className="project-link">view repo →</span>
-    </a>
+    </article>
   );
 }
 
